@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Mohamed Hassan</title>
+    <meta name="description" content="Get in touch with Mohamed Hassan for collaborations, projects, or inquiries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-theme="dark">
 
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">MOHAMED HASSAN</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
-            </ul>
-            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo">MOHAMED HASSAN</a>
+            <div class="navbar__actions">
+                 <ul id="navbar-menu" class="navbar__menu">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="about.html" class="navbar__link">About</a></li>
+                    <li class="navbar__item"><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
+                    <li class="navbar__item"><a href="contact.html" class="navbar__link active">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu">
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                </button>
+            </div>
         </div>
     </nav>
     
@@ -28,15 +40,14 @@
             <h1 class="page-title" data-aos="fade-up">Let's Create Together</h1>
             <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
                 <div class="contact-form-container">
-                    <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
-                        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
-                        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
-                        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
-                        <button type="submit" class="cta-button">Send Message</button>
-                    </form>
+                    <h3>The Fastest Way to Reach Me</h3>
+                    <p>Have a project in mind or a question? Send me a message directly on WhatsApp for a quick response. I'm excited to hear about your ideas!</p>
+                    <a href="https://wa.me/201128939061" target="_blank" class="cta-button" style="margin-top: 1rem; font-size: 1.2rem; padding: 15px 35px;">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
                 </div>
                 <div class="contact-info-container">
-                    <h3>Contact Directly</h3>
+                    <h3>Or, Use Other Methods</h3>
                     <p><strong>Email:</strong> <a href="mailto:mohamedretoucherxx@gmail.com">mohamedretoucherxx@gmail.com</a></p>
                     <p><strong>Phone:</strong> <a href="tel:+201128939061">+20 112 893 9061</a></p>
                     <hr class="separator">
@@ -57,7 +68,7 @@
         <div class="container"><p>&copy; 2025 Mohamed Hassan. All Rights Reserved.</p></div>
     </footer>
     
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
