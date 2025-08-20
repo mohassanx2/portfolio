@@ -11,16 +11,18 @@
         /* --- Animation Styles --- */
         .before-after-container {
             position: relative;
-            display: block; /* Changed to block */
+            display: block;
             overflow: hidden;
             width: 100%;
+            height: 100%; /* Make it fill the grid cell height */
         }
 
         .before-after-container .before-image,
         .before-after-container .after-image {
             display: block;
             width: 100%;
-            height: auto;
+            height: 100%; /* Make images fill container */
+            object-fit: cover; /* Ensure image covers the area without distortion */
         }
 
         .before-after-container .after-image {
@@ -38,17 +40,18 @@
             100% { opacity: 1; }
         }
 
-        /* --- NEW PROFESSIONAL GALLERY LAYOUT --- */
+        /* --- NEW BALANCED TWO-COLUMN LAYOUT --- */
         .project-gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 20px; /* This is the space between the rows */
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+            gap: 20px;
+            align-items: start;
         }
 
-        .gallery-row {
+        .gallery-side-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Two equal columns for the images */
-            gap: 20px; /* This is the space between images in a row */
+            grid-template-columns: 1fr 1fr; /* 2x2 grid for the side images */
+            gap: 20px;
         }
         
         .project-gallery img {
@@ -59,8 +62,8 @@
 
         /* Responsive styles for mobile */
         @media (max-width: 768px) {
-            .gallery-row {
-                grid-template-columns: 1fr; /* Stack images in rows on mobile */
+            .project-gallery {
+                grid-template-columns: 1fr; /* Stack columns on mobile */
             }
         }
     </style>
@@ -82,12 +85,9 @@
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755698463/after-basma_i1ohta.webp" alt="After retouching - Basma" loading="lazy" class="after-image">
                 </div>
 
-                <div class="gallery-row">
+                <div class="gallery-side-grid">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687456/ahmed-dash_ddwtbe.webp" alt="Retouched portrait of actor Ahmed Dash" loading="lazy">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687458/omar-essam_gpaafa.webp" alt="Retouched portrait of actor Omar Essam" loading="lazy">
-                </div>
-
-                <div class="gallery-row">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755696504/IMG_9884_fkhi0o.webp" alt="Retouched promotional shot of Basma" loading="lazy">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755696636/IMG_9879_bsayyn.webp" alt="General promotional art for Masar Ejbary" loading="lazy">
                 </div>
