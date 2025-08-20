@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../../css/style.css">
     <style>
-        /* --- Animation Styles (No changes here) --- */
+        /* --- Animation Styles --- */
         .before-after-container {
             position: relative;
             display: inline-block;
             overflow: hidden;
-            width: 100%; /* Ensure it fills its container */
+            width: 100%;
         }
 
         .before-after-container .before-image,
@@ -38,31 +38,31 @@
             100% { opacity: 1; }
         }
 
-        /* --- NEW STYLES FOR GALLERY LAYOUT --- */
+        /* --- GALLERY LAYOUT STYLES --- */
         .project-gallery {
             display: grid;
-            grid-template-columns: 2fr 1fr; /* Main image is twice the width of the side column */
-            gap: 20px; /* Adjust space between columns */
-            align-items: start; /* Align columns to the top */
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            align-items: start;
         }
 
+        /* THIS IS THE MODIFIED PART */
         .gallery-side-images {
-            display: flex;
-            flex-direction: column;
-            gap: 20px; /* Adjust space between the vertical images */
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Creates a 2-column grid */
+            gap: 20px; /* Space between all images */
         }
         
-        /* Ensure all images inside the gallery scale properly */
         .project-gallery img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        /* Responsive styles for mobile screens */
+        /* Responsive styles for mobile */
         @media (max-width: 768px) {
             .project-gallery {
-                grid-template-columns: 1fr; /* Stack columns on top of each other */
+                grid-template-columns: 1fr;
             }
         }
     </style>
