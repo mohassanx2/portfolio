@@ -11,7 +11,7 @@
         /* --- Animation Styles --- */
         .before-after-container {
             position: relative;
-            display: inline-block;
+            display: block; /* Changed to block */
             overflow: hidden;
             width: 100%;
         }
@@ -38,19 +38,17 @@
             100% { opacity: 1; }
         }
 
-        /* --- GALLERY LAYOUT STYLES --- */
+        /* --- NEW PROFESSIONAL GALLERY LAYOUT --- */
         .project-gallery {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-            align-items: start;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* This is the space between the rows */
         }
 
-        /* THIS IS THE MODIFIED PART */
-        .gallery-side-images {
+        .gallery-row {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Creates a 2-column grid */
-            gap: 20px; /* Space between all images */
+            grid-template-columns: 1fr 1fr; /* Two equal columns for the images */
+            gap: 20px; /* This is the space between images in a row */
         }
         
         .project-gallery img {
@@ -61,8 +59,8 @@
 
         /* Responsive styles for mobile */
         @media (max-width: 768px) {
-            .project-gallery {
-                grid-template-columns: 1fr;
+            .gallery-row {
+                grid-template-columns: 1fr; /* Stack images in rows on mobile */
             }
         }
     </style>
@@ -79,16 +77,17 @@
             
             <div class="project-gallery" data-aos="fade-up" data-aos-delay="200">
                 
-                <div class="gallery-main-image">
-                    <div class="before-after-container">
-                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755698477/before-basma_hefqv4.webp" alt="Before retouching - Basma" loading="lazy" class="before-image">
-                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755698463/after-basma_i1ohta.webp" alt="After retouching - Basma" loading="lazy" class="after-image">
-                    </div>
+                <div class="before-after-container">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755698477/before-basma_hefqv4.webp" alt="Before retouching - Basma" loading="lazy" class="before-image">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755698463/after-basma_i1ohta.webp" alt="After retouching - Basma" loading="lazy" class="after-image">
                 </div>
 
-                <div class="gallery-side-images">
+                <div class="gallery-row">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687456/ahmed-dash_ddwtbe.webp" alt="Retouched portrait of actor Ahmed Dash" loading="lazy">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687458/omar-essam_gpaafa.webp" alt="Retouched portrait of actor Omar Essam" loading="lazy">
+                </div>
+
+                <div class="gallery-row">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755696504/IMG_9884_fkhi0o.webp" alt="Retouched promotional shot of Basma" loading="lazy">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755696636/IMG_9879_bsayyn.webp" alt="General promotional art for Masar Ejbary" loading="lazy">
                 </div>
