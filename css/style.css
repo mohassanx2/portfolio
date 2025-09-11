@@ -255,12 +255,4 @@ body[data-theme="light"] .timeline-meta { color: #666; }
     .about-preview__container { text-align: center; }
     .about-preview__text .section-title, .about-preview__text .section-title::after { margin-left: auto; margin-right: auto; }
     .resume-header, .resume-header__left { flex-direction: column; text-align: center; }
-
-    /* ==== الكود الصحيح والنهائي لمشكلة الصور ==== */
-    .portfolio-item {
-        aspect-ratio: auto; /* لجعل الحاوية تتكيف مع طول الصورة */
-    }
-    .portfolio-item .portfolio-item__media {
-        height: auto; /* أهم سطر: يسمح للصورة أو الفيديو بتحديد ارتفاعه بنفسه */
-    }
 }
