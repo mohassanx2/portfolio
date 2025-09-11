@@ -1,131 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Photography | Mohamed Hassan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Photography | Mohamed Hassan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../../css/style.css">
 
-  <!-- Fancybox CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="../../css/style.css">
-
-  <style>
-    /* Fix for project gallery images */
-    .project-gallery {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .project-gallery a {
-      display: block;
-      width: 100%;
-    }
-
-    .project-gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;       /* يحافظ على الصورة كاملة */
-      aspect-ratio: 1080 / 1350; /* يثبت نسبة الطول للعرض */
-      background-color: #000;    /* لون خلفية يملأ المساحة */
-      border-radius: 8px;
-    }
-
-    /* Responsive adjustments */
-    @media (min-width: 768px) {
-      .project-gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .project-gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  </style>
-</head>
+    <style>
+        .project-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain; 
+        }
+    </style>
+    </head>
 <body data-theme="dark">
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="../../index.html" class="navbar__logo">MOHAMED HASSAN</a>
-      <div class="navbar__actions">
-        <ul id="navbar-menu" class="navbar__menu">
-          <li class="navbar__item"><a href="../../index.html" class="navbar__link">Home</a></li>
-          <li class="navbar__item"><a href="../../about.html" class="navbar__link">About</a></li>
-          <li class="navbar__item"><a href="../../portfolio.html" class="navbar__link active">Portfolio</a></li>
-          <li class="navbar__item"><a href="../../contact.html" class="navbar__link">Contact</a></li>
-        </ul>
-        <button class="theme-toggle" aria-label="Toggle light/dark theme"><i class="fas fa-moon"></i></button>
-        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu">
-          <span class="hamburger__bar"></span>
-          <span class="hamburger__bar"></span>
-          <span class="hamburger__bar"></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <main class="page-main-content">
-    <div class="container">
-      <header class="project-header" data-aos="fade-up">
-        <a href="../../portfolio.html" class="back-to-portfolio" id="back-link">&larr; Back to Portfolio</a>
-        <h1 class="page-title">Food Photography</h1>
-        <p class="project-subtitle" data-aos-delay="100">
-          A collection of delicious and visually appealing food photographs, showcasing culinary art with professional styling and lighting.
-        </p>
-      </header>
-
-      <!-- Project Gallery -->
-      <div class="project-gallery" data-aos="fade-up" data-aos-delay="200">
-        <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,c_limit,w_1920,h_1920/v1755643155/photo1_byb4ku.webp" data-fancybox="gallery" data-caption="Food Photography 1">
-          <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,c_limit,w_1920,h_1920/v1755643155/photo1_byb4ku.webp" alt="Food Photography 1" loading="lazy">
-        </a>
-        <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755643155/photo6_nmnrga.webp" data-fancybox="gallery" data-caption="Food Photography 2">
-          <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755643155/photo6_nmnrga.webp" alt="Food Photography 2" loading="lazy">
-        </a>
-        <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755643154/photo3_lc3vfu.webp" data-fancybox="gallery" data-caption="Food Photography 3">
-          <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755643154/photo3_lc3vfu.webp" alt="Food Photography 3" loading="lazy">
-        </a>
-        <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755643154/photo2_mruesc.webp" data-fancybox="gallery" data-caption="Food Photography 4">
-          <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755643154/photo2_mruesc.webp" alt="Food Photography 4" loading="lazy">
-        </a>
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Mohamed Hassan. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const params = new URLSearchParams(window.location.search);
-      const filter = params.get('filter');
-      const backLink = document.getElementById('back-link');
-      if (filter && backLink) {
-        backLink.href = `../../portfolio.html?filter=${filter}`;
-      }
-    });
-  </script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
-  <script src="../../js/script.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script>
-    Fancybox.bind("[data-fancybox]", {
-      wheel: "zoom"
-    });
-  </script>
+    <nav class="navbar"><div class="navbar__container"><a href="../../index.html" class="navbar__logo">MOHAMED HASSAN</a><div class="navbar__actions"><ul id="navbar-menu" class="navbar__menu"><li class="navbar__item"><a href="../../index.html" class="navbar__link">Home</a></li><li class="navbar__item"><a href="../../about.html" class="navbar__link">About</a></li><li class="navbar__item"><a href="../../portfolio.html" class="navbar__link active">Portfolio</a></li><li class="navbar__item"><a href="../../contact.html" class="navbar__link">Contact</a></li></ul><button class="theme-toggle" aria-label="Toggle light/dark theme"><i class="fas fa-moon"></i></button><button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></button></div></div></nav>
+    <main class="page-main-content">
+        <div class="container">
+            <header class="project-header" data-aos="fade-up">
+                 <a href="../../portfolio.html" class="back-to-portfolio" id="back-link">&larr; Back to Portfolio</a>
+                <h1 class="page-title">Food Photography</h1>
+                <p class="project-subtitle" data-aos-delay="100">A collection of delicious and visually appealing food photographs, showcasing culinary art with professional styling and lighting.</p>
+            </header>
+            <div class="project-gallery" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,c_limit,w_1920,h_1920/v1755643155/photo1_byb4ku.webp" data-fancybox="gallery" data-caption="Food Photography 1">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,c_limit,w_1920,h_1920/v1755643155/photo1_byb4ku.webp" alt="Food Photography 1" loading="lazy">
+                </a>
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755643155/photo6_nmnrga.webp" data-fancybox="gallery" data-caption="Food Photography 2">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755643155/photo6_nmnrga.webp" alt="Food Photography 2" loading="lazy">
+                </a>
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755643154/photo3_lc3vfu.webp" data-fancybox="gallery" data-caption="Food Photography 3">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755643154/photo3_lc3vfu.webp" alt="Food Photography 3" loading="lazy">
+                </a>
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755643154/photo2_mruesc.webp" data-fancybox="gallery" data-caption="Food Photography 4">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755643154/photo2_mruesc.webp" alt="Food Photography 4" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="container"><p>&copy; 2025 Mohamed Hassan. All Rights Reserved.</p></div></footer>
+    <script>document.addEventListener('DOMContentLoaded', function() { const params = new URLSearchParams(window.location.search); const filter = params.get('filter'); const backLink = document.getElementById('back-link'); if (filter && backLink) { backLink.href = `../../portfolio.html?filter=${filter}`; } });</script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="../../js/script.js" defer></script>
+	  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind("[data-fancybox]", {
+        wheel: "zoom"
+      });
+    </script>
 </body>
 </html>
