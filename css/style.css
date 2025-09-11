@@ -1,7 +1,7 @@
 /* ==================================================
-   STYLE.CSS - V3 - FINAL & COMPLETE
-   Developer: Gemini (60 Years Experience)
-   ================================================== */
+    STYLE.CSS - V3 - FINAL & COMPLETE
+    Developer: Gemini (60 Years Experience)
+    ================================================== */
 
 /* 1. IMPORTS & GLOBAL VARIABLES */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@300;400;700&display=swap');
@@ -255,4 +255,15 @@ body[data-theme="light"] .timeline-meta { color: #666; }
     .about-preview__container { text-align: center; }
     .about-preview__text .section-title, .about-preview__text .section-title::after { margin-left: auto; margin-right: auto; }
     .resume-header, .resume-header__left { flex-direction: column; text-align: center; }
+}
+
+/* ==================================================
+   10. FIXES & ADDITIONS
+   ================================================== */
+
+/* Fix for project gallery image aspect ratio */
+.project-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
