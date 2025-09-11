@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Photography | Mohamed Hassan</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../../css/style.css">
@@ -15,13 +18,24 @@
             <header class="project-header" data-aos="fade-up">
                  <a href="../../portfolio.html" class="back-to-portfolio" id="back-link">&larr; Back to Portfolio</a>
                 <h1 class="page-title">Food Photography</h1>
-                <p class="project-subtitle" data-aos-delay="100">A collection of delicious and visually appealing food photographs, showcasing culinary art with professional styling and lighting.</p>
+                <p class="project-subtitle" data-aos-delay="100">A collection of delicious and visually appealing food photographs, showcasing culinary art with professional styling and lighting. Click any image to enlarge.</p>
             </header>
+            
             <div class="project-gallery" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643155/photo1_byb4ku.webp" alt="Food Photography 1" loading="lazy">
-                <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643155/photo6_nmnrga.webp" alt="Food Photography 2" loading="lazy">
-                <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643154/photo3_lc3vfu.webp" alt="Food Photography 3" loading="lazy">
-                <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643154/photo2_mruesc.webp" alt="Food Photography 4" loading="lazy">
+                
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643155/photo1_byb4ku.webp" data-fancybox="gallery" data-caption="Food Photography 1">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto/v1755643155/photo1_byb4ku.webp" alt="Food Photography 1" loading="lazy">
+                </a>
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643155/photo6_nmnrga.webp" data-fancybox="gallery" data-caption="Food Photography 2">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto/v1755643155/photo6_nmnrga.webp" alt="Food Photography 2" loading="lazy">
+                </a>
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643154/photo3_lc3vfu.webp" data-fancybox="gallery" data-caption="Food Photography 3">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto/v1755643154/photo3_lc3vfu.webp" alt="Food Photography 3" loading="lazy">
+                </a>
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643154/photo2_mruesc.webp" data-fancybox="gallery" data-caption="Food Photography 4">
+                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto/v1755643154/photo2_mruesc.webp" alt="Food Photography 4" loading="lazy">
+                </a>
+                
             </div>
         </div>
     </main>
@@ -29,5 +43,37 @@
     <script>document.addEventListener('DOMContentLoaded', function() { const params = new URLSearchParams(window.location.search); const filter = params.get('filter'); const backLink = document.getElementById('back-link'); if (filter && backLink) { backLink.href = `../../portfolio.html?filter=${filter}`; } });</script>
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="../../js/script.js" defer></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
+    <script>
+      // This function determines the best way to display the image based on screen size
+      function getContentFit() {
+        if (window.innerWidth <= 768) {
+          return "contain"; // Mobile: Show the full image
+        } else {
+          return "cover";   // Desktop: Fill the screen for an immersive look
+        }
+      }
+
+      // This function initializes Fancybox with the correct settings
+      function initFancybox() {
+        Fancybox.bind("[data-fancybox]", {
+          Images: {
+            contentFit: getContentFit(),
+          },
+        });
+      }
+
+      // Run the function when the page first loads
+      initFancybox();
+
+      // Re-run the function if the user resizes the window (e.g., rotates their tablet)
+      window.addEventListener("resize", () => {
+        Fancybox.destroy();
+        initFancybox();
+      });
+    </script>
+
 </body>
 </html>
