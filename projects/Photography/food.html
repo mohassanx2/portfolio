@@ -22,7 +22,7 @@
             
             <div class="project-gallery" data-aos="fade-up" data-aos-delay="200">
                 
-                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/w_1920,q_auto/v1755643155/photo1_byb4ku.webp" data-fancybox="gallery" data-caption="Food Photography 1">
+                <a href="https://res.cloudinary.com/dg3jhh100/image/upload/w_1920,q_auto/v1755643155/photo1_byb4ku.webp" data-fancybox="gallery" data-caption="Food Photography 1">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto/v1755643155/photo1_byb4ku.webp" alt="Food Photography 1" loading="lazy">
                 </a>
                 <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/w_1920,q_auto/v1755643155/photo6_nmnrga.webp" data-fancybox="gallery" data-caption="Food Photography 2">
@@ -47,21 +47,14 @@
     
     <script>
       Fancybox.bind("[data-fancybox]", {
-        // نضمن أن الصورة تبدأ دائماً بحجم مناسب للشاشة بالكامل
+        // ليضمن أن الصورة تبدأ دائماً بحجم مناسب للشاشة
         Images: {
           initialSize: "fit",
         },
-        // هنا نقوم بتعطيل كل خصائص الزوم بشكل كامل
+        // هذا الأمر يمنع الزوم نهائياً عن طريق تحديد أن أقصى حجم ممكن هو حجمها الطبيعي
         Panzoom: {
-          // تعطيل الزوم بعجلة الماوس
-          wheel: false,
-          // تعطيل الزوم باللمس (باستخدام اصبعين)
-          pinchToZoom: false,
-          // تعطيل الزوم عند الضغط مرتين
-          doubleClick: false,
-          // تعطيل الزوم عند الضغط مرة واحدة
-          click: false,
-        },
+          maxScale: 1,
+        }
       });
     </script>
 
