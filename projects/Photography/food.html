@@ -14,10 +14,10 @@
             width: 100%;
             height: auto;
             display: block;
-            object-fit: contain; 
         }
     </style>
-    </head>
+
+</head>
 <body data-theme="dark">
     <nav class="navbar"><div class="navbar__container"><a href="../../index.html" class="navbar__logo">MOHAMED HASSAN</a><div class="navbar__actions"><ul id="navbar-menu" class="navbar__menu"><li class="navbar__item"><a href="../../index.html" class="navbar__link">Home</a></li><li class="navbar__item"><a href="../../about.html" class="navbar__link">About</a></li><li class="navbar__item"><a href="../../portfolio.html" class="navbar__link active">Portfolio</a></li><li class="navbar__item"><a href="../../contact.html" class="navbar__link">Contact</a></li></ul><button class="theme-toggle" aria-label="Toggle light/dark theme"><i class="fas fa-moon"></i></button><button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></button></div></div></nav>
     <main class="page-main-content">
@@ -47,11 +47,41 @@
     <script>document.addEventListener('DOMContentLoaded', function() { const params = new URLSearchParams(window.location.search); const filter = params.get('filter'); const backLink = document.getElementById('back-link'); if (filter && backLink) { backLink.href = `../../portfolio.html?filter=${filter}`; } });</script>
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="../../js/script.js" defer></script>
-	  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
     <script>
-      Fancybox.bind("[data-fancybox]", {
-        wheel: "zoom"
-      });
+        // متغير لحفظ مكان الـ scroll
+        let scrollPosition = 0;
+
+        Fancybox.bind("[data-fancybox]", {
+            // إعداداتك الأصلية
+            wheel: "zoom",
+
+            // نضيف هذه الأحداث للتحكم في سلوك الصفحة
+            on: {
+                // قبل أن تظهر النافذة
+                reveal: () => {
+                    // نحفظ مكان الـ scroll الحالي
+                    scrollPosition = window.scrollY;
+                    
+                    // نثبت جسم الصفحة في مكانه
+                    document.body.style.position = 'fixed';
+                    document.body.style.top = `-${scrollPosition}px`;
+                    document.body.style.width = '100%';
+                },
+                // بعد إغلاق النافذة
+                close: () => {
+                    // نعيد كل شيء لطبيعته
+                    document.body.style.position = '';
+                    document.body.style.top = '';
+                    document.body.style.width = '';
+                    
+                    // نعود لنفس مكان الـ scroll الذي كنا فيه
+                    window.scrollTo(0, scrollPosition);
+                }
+            }
+        });
     </script>
+
 </body>
 </html>
