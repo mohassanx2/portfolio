@@ -255,4 +255,9 @@ body[data-theme="light"] .timeline-meta { color: #666; }
     .about-preview__container { text-align: center; }
     .about-preview__text .section-title, .about-preview__text .section-title::after { margin-left: auto; margin-right: auto; }
     .resume-header, .resume-header__left { flex-direction: column; text-align: center; }
+
+    /* ==== THE FIX FOR MOBILE IMAGES ==== */
+    .portfolio-item {
+        aspect-ratio: auto;
+    }
 }
