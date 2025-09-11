@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retouching for "Masar Ejbary" Series | Mohamed Hassan</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        /* --- Animation Styles --- */
+        .before-after-container {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .before-after-container .before-image,
+        .before-after-container .after-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .before-after-container .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: fade-in-out 5s ease-in-out infinite;
+        }
+
+        @keyframes fade-in-out {
+            0% { opacity: 1; }
+            45% { opacity: 1; }
+            50% { opacity: 0; }
+            95% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* --- Two-Column Layout --- */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .gallery-side-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .project-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Responsive styles for mobile */
+        @media (max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body data-theme="dark">
+    <nav class="navbar"><div class="navbar__container"><a href="../../index.html" class="navbar__logo">MOHAMED HASSAN</a><div class="navbar__actions"><ul id="navbar-menu" class="navbar__menu"><li class="navbar__item"><a href="../../index.html" class="navbar__link">Home</a></li><li class="navbar__item"><a href="../../about.html" class="navbar__link">About</a></li><li class="navbar__item"><a href="../../portfolio.html" class="navbar__link active">Portfolio</a></li><li class="navbar__item"><a href="../../contact.html" class="navbar__link">Contact</a></li></ul><button class="theme-toggle" aria-label="Toggle light/dark theme"><i class="fas fa-moon"></i></button><button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></button></div></div></nav>
+    <main class="page-main-content">
+        <div class="container">
+            <header class="project-header" data-aos="fade-up">
+                <a href="../../portfolio.html" class="back-to-portfolio" id="back-link">&larr; Back to Portfolio</a>
+                <h1 class="page-title">"Masar Ejbary" TV Series</h1>
+                <p class="project-subtitle" data-aos-delay="100">Contributed to the post-production of the popular TV series "Masar Ejbary" by providing high-end retouching for promotional materials and key visuals, ensuring a polished and professional look for broadcast and marketing campaigns.</p>
+            </header>
+            
+            <div class="project-gallery" data-aos="fade-up" data-aos-delay="200">
+                
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755698477/before-basma_hefqv4.webp" data-fancybox="gallery" data-caption="Basma - Before" style="display: none;"></a>
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755698463/after-basma_i1ohta.webp" data-fancybox="gallery" data-caption="Basma - After">
+                    <div class="before-after-container">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755698477/before-basma_hefqv4.webp" alt="Before retouching - Basma" loading="lazy" class="before-image">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755698463/after-basma_i1ohta.webp" alt="After retouching - Basma" loading="lazy" class="after-image">
+                    </div>
+                </a>
+
+                <div class="gallery-side-grid">
+                    <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755687456/ahmed-dash_ddwtbe.webp" data-fancybox="gallery" data-caption="Retouched portrait of actor Ahmed Dash">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755687456/ahmed-dash_ddwtbe.webp" alt="Retouched portrait of actor Ahmed Dash" loading="lazy">
+                    </a>
+                    <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755687458/omar-essam_gpaafa.webp" data-fancybox="gallery" data-caption="Retouched portrait of actor Omar Essam">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755687458/omar-essam_gpaafa.webp" alt="Retouched portrait of actor Omar Essam" loading="lazy">
+                    </a>
+                    <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755696504/IMG_9884_fkhi0o.webp" data-fancybox="gallery" data-caption="Retouched promotional shot of Basma">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755696504/IMG_9884_fkhi0o.webp" alt="Retouched promotional shot of Basma" loading="lazy">
+                    </a>
+                    <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1200/v1755696636/IMG_9879_bsayyn.webp" data-fancybox="gallery" data-caption="Retouched portrait of actor Sabrien">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/q_auto,f_auto,w_1000/v1755696636/IMG_9879_bsayyn.webp" alt="General promotional art for Masar Ejbary" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="container"><p>&copy; 2025 Mohamed Hassan. All Rights Reserved.</p></div></footer>
+    <script>document.addEventListener('DOMContentLoaded', function() { const params = new URLSearchParams(window.location.search); const filter = params.get('filter'); const backLink = document.getElementById('back-link'); if (filter && backLink) { backLink.href = `../../portfolio.html?filter=${filter}`; } });</script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="../../js/script.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind("[data-fancybox]", {
+        // Enable mouse wheel zoom
+        wheel: "zoom"
+      });
+    </script>
+</body>
+</html>

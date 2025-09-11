@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Photography | Mohamed Hassan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-theme="dark">
+    <nav class="navbar"><div class="navbar__container"><a href="../../index.html" class="navbar__logo">MOHAMED HASSAN</a><div class="navbar__actions"><ul id="navbar-menu" class="navbar__menu"><li class="navbar__item"><a href="../../index.html" class="navbar__link">Home</a></li><li class="navbar__item"><a href="../../about.html" class="navbar__link">About</a></li><li class="navbar__item"><a href="../../portfolio.html" class="navbar__link active">Portfolio</a></li><li class="navbar__item"><a href="../../contact.html" class="navbar__link">Contact</a></li></ul><button class="theme-toggle" aria-label="Toggle light/dark theme"><i class="fas fa-moon"></i></button><button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></button></div></div></nav>
+    <main class="page-main-content">
+        <div class="container">
+            <header class="project-header" data-aos="fade-up">
+                 <a href="../../portfolio.html" class="back-to-portfolio" id="back-link">&larr; Back to Portfolio</a>
+                <h1 class="page-title">Furniture Photography</h1>
+                <p class="project-subtitle" data-aos-delay="100">A collection of curated furniture photography projects. Click on any project to see the full gallery.</p>
+            </header>
+            
+            <div id="portfolio-grid" class="sub-project-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-item">
+                    <a href="furniture/project1.html" class="sub-project-link">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto,f_auto/v1755643628/photo7_jzmjkx.webp" alt="Modern Living Room" class="portfolio-item__media" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Project 1</h3>
+                            <span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="furniture/project2.html" class="sub-project-link">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto,f_auto/v1755643675/photo38_ksasbc.webp" alt="Minimalist Bedroom Set" class="portfolio-item__media" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Project 2</h3>
+                            <span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="furniture/project3.html" class="sub-project-link">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto,f_auto/v1755643679/photo25_okemt4.webp" alt="Rustic Dining Collection" class="portfolio-item__media" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Project 3</h3>
+                            <span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="furniture/project4.html" class="sub-project-link">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto,f_auto/v1755793975/p1_kifyps.webp" alt="Modern Aesthetics" class="portfolio-item__media" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Project 4</h3>
+                            <span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="furniture/project5.html" class="sub-project-link">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto,f_auto/v1755795136/p1_zdfdp9.webp" alt="Contemporary Interior" class="portfolio-item__media" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Project 5</h3>
+                            <span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="furniture/project6.html" class="sub-project-link">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto,f_auto/v1755795380/6U1A0104_idrsny.webp" alt="Elegant Furniture Pieces" class="portfolio-item__media" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Project 6</h3>
+                            <span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+                </div>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="container"><p>&copy; 2025 Mohamed Hassan. All Rights Reserved.</p></div></footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const filter = params.get('filter');
+            const backLink = document.getElementById('back-link');
+            if (filter && backLink) { backLink.href = `../../portfolio.html?filter=${filter}`; }
+            if (filter) {
+                document.querySelectorAll('.sub-project-link').forEach(link => {
+                    const originalHref = link.getAttribute('href');
+                    link.setAttribute('href', `${originalHref}?filter=${filter}`);
+                });
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="../../js/script.js" defer></script>
+</body>
+</html>
