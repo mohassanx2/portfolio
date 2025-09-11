@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body data-theme="dark">
-    <nav class="navbar"><div class="navbar__container"><a href="../../index.html" class="navbar__logo">MOHAMED Hassan</a><div class="navbar__actions"><ul id="navbar-menu" class="navbar__menu"><li class="navbar__item"><a href="../../index.html" class="navbar__link">Home</a></li><li class="navbar__item"><a href="../../about.html" class="navbar__link">About</a></li><li class="navbar__item"><a href="../../portfolio.html" class="navbar__link active">Portfolio</a></li><li class="navbar__item"><a href="../../contact.html" class="navbar__link">Contact</a></li></ul><button class="theme-toggle" aria-label="Toggle light/dark theme"><i class="fas fa-moon"></i></button><button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></button></div></div></nav>
+    <nav class="navbar"><div class="navbar__container"><a href="../../index.html" class="navbar__logo">MOHAMED HASSAN</a><div class="navbar__actions"><ul id="navbar-menu" class="navbar__menu"><li class="navbar__item"><a href="../../index.html" class="navbar__link">Home</a></li><li class="navbar__item"><a href="../../about.html" class="navbar__link">About</a></li><li class="navbar__item"><a href="../../portfolio.html" class="navbar__link active">Portfolio</a></li><li class="navbar__item"><a href="../../contact.html" class="navbar__link">Contact</a></li></ul><button class="theme-toggle" aria-label="Toggle light/dark theme"><i class="fas fa-moon"></i></button><button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></button></div></div></nav>
     <main class="page-main-content">
         <div class="container">
             <header class="project-header" data-aos="fade-up">
@@ -22,16 +22,16 @@
             
             <div class="project-gallery" data-aos="fade-up" data-aos-delay="200">
                 
-                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/w_1920,q_auto/v1755643155/photo1_byb4ku.webp" data-fancybox="gallery" data-caption="Food Photography 1">
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643155/photo1_byb4ku.webp" data-fancybox="gallery" data-caption="Food Photography 1">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto/v1755643155/photo1_byb4ku.webp" alt="Food Photography 1" loading="lazy">
                 </a>
-                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/w_1920,q_auto/v1755643155/photo6_nmnrga.webp" data-fancybox="gallery" data-caption="Food Photography 2">
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643155/photo6_nmnrga.webp" data-fancybox="gallery" data-caption="Food Photography 2">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto/v1755643155/photo6_nmnrga.webp" alt="Food Photography 2" loading="lazy">
                 </a>
-                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/w_1920,q_auto/v1755643154/photo3_lc3vfu.webp" data-fancybox="gallery" data-caption="Food Photography 3">
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643154/photo3_lc3vfu.webp" data-fancybox="gallery" data-caption="Food Photography 3">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto/v1755643154/photo3_lc3vfu.webp" alt="Food Photography 3" loading="lazy">
                 </a>
-                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/w_1920,q_auto/v1755643154/photo2_mruesc.webp" data-fancybox="gallery" data-caption="Food Photography 4">
+                <a href="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643154/photo2_mruesc.webp" data-fancybox="gallery" data-caption="Food Photography 4">
                     <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/w_800,q_auto/v1755643154/photo2_mruesc.webp" alt="Food Photography 4" loading="lazy">
                 </a>
                 
@@ -46,17 +46,31 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     
     <script>
-      Fancybox.bind("[data-fancybox]", {
-        // نضمن أن الصور دائماً تظهر بحجم مناسب للشاشة
-        Images: {
-          initialSize: "fit"
-        },
-        // نلغي خاصية الزوم عند اللمسة الواحدة ونعتمد على الـ "pinch-to-zoom"
-        click: "toggleZoom",
-        Tap: {
-            // Set to false to disable zooming on single tap
-            toggleZoom: false
+      // دالة بتحدد طريقة عرض الصور حسب حجم الشاشة
+      function getContentFit() {
+        if (window.innerWidth <= 768) {
+          return "contain"; // موبايل: الصورة كاملة داخل الشاشة
+        } else {
+          return "cover";   // ديسكتوب: الصورة تملأ الشاشة
         }
+      }
+
+      // دالة تهيئة المعرض
+      function initFancybox() {
+        Fancybox.bind("[data-fancybox]", {
+          Images: {
+            contentFit: getContentFit(),
+          },
+        });
+      }
+
+      // التشغيل عند فتح الصفحة
+      initFancybox();
+
+      // إعادة التشغيل عند تغيير حجم الشاشة (مثل لف الموبايل)
+      window.addEventListener("resize", () => {
+        Fancybox.destroy();
+        initFancybox();
       });
     </script>
 
