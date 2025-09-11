@@ -6,6 +6,7 @@
     <title>Food Photography | Mohamed Hassan</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../../css/style.css">
@@ -48,8 +49,7 @@
     <script>
       Fancybox.bind("[data-fancybox]", {
         Images: {
-          // هذا هو الأمر الذي يجعل الصورة تملأ الشاشة (cover)
-          contentFit: "cover",
+          contentFit: "contain", // This makes the image complete inside the screen
         },
       });
     </script>
