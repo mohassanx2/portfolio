@@ -46,31 +46,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     
     <script>
-      // دالة بتحدد طريقة عرض الصور حسب حجم الشاشة
-      function getContentFit() {
-        if (window.innerWidth <= 768) {
-          return "contain"; // موبايل: الصورة كاملة داخل الشاشة
-        } else {
-          return "cover";   // ديسكتوب: الصورة تملأ الشاشة
-        }
-      }
-
-      // دالة تهيئة المعرض
-      function initFancybox() {
-        Fancybox.bind("[data-fancybox]", {
-          Images: {
-            contentFit: getContentFit(),
+      Fancybox.bind("[data-fancybox]", {
+        // We still need this to make sure the image fits inside the fullscreen view
+        Images: {
+          contentFit: "contain",
+        },
+        // This function runs when an image is revealed
+        on: {
+          reveal: (fancybox, slide) => {
+            // We try to request fullscreen mode
+            if (fancybox.plugins.Fullscreen) {
+              fancybox.plugins.Fullscreen.request();
+            }
           },
-        });
-      }
-
-      // التشغيل عند فتح الصفحة
-      initFancybox();
-
-      // إعادة التشغيل عند تغيير حجم الشاشة (مثل لف الموبايل)
-      window.addEventListener("resize", () => {
-        Fancybox.destroy();
-        initFancybox();
+        },
       });
     </script>
 
