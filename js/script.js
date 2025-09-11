@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 filterBtnSelector: '.filter-btn',
                 activeFilterClass: 'active',
                 hiddenItemClass: 'hidden',
-                // NEW: Key for storing filter state in sessionStorage
                 filterStorageKey: 'activePortfolioFilter',
             },
             mobileMenu: {
@@ -52,9 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
             this.initPortfolio();
             this.initVideoHover();
             this.initScrollRestoration();
+            this.initFancybox(); // <-- تمت إضافة هذه الدالة الجديدة هنا
         },
 
-        // --- CORE MODULES (UNCHANGED) ---
+        // --- CORE MODULES ---
         initAOS() { if (typeof AOS !== 'undefined') AOS.init(this.config.aos); },
         initMobileMenu() {
             const cfg = this.config.mobileMenu, hamburger = document.querySelector(cfg.hamburgerSelector), navMenu = document.querySelector(cfg.navMenuSelector);
@@ -84,6 +84,33 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(restoreScroll, 150);
         },
         
+        // ===================================================================
+        // === الكود الجديد المضاف لإصلاح مشكلة FANCYBOX                     ===
+        // ===================================================================
+        initFancybox() {
+            if (typeof Fancybox === 'undefined') return;
+
+            let scrollPosition = 0;
+            Fancybox.bind("[data-fancybox]", {
+                wheel: "zoom", // Enables mouse wheel zooming
+                on: {
+                    reveal: () => {
+                        scrollPosition = window.scrollY;
+                        document.body.style.position = 'fixed';
+                        document.body.style.top = `-${scrollPosition}px`;
+                        document.body.style.width = '100%';
+                    },
+                    close: () => {
+                        document.body.style.position = '';
+                        document.body.style.top = '';
+                        document.body.style.width = '';
+                        window.scrollTo(0, scrollPosition);
+                    }
+                }
+            });
+        },
+        // ===================================================================
+
         // --- PORTFOLIO MODULE (RE-ARCHITECTED) ---
         initPortfolio() {
             const cfg = this.config.portfolio;
@@ -197,4 +224,5 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     App.init();
+
 });
