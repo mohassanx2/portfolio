@@ -1,43 +1,725 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Hassan | 3D Artist & Visual Creator</title>
-    <meta name="description" content="Check out my latest CV and creative work – photo retouching, 3D art, filmmaking & more.">
-    <meta property="og:title" content="Mohamed Hassan | 3D Artist & Visual Creator" />
-    <meta property="og:description" content="Check out my latest CV and creative work – photo retouching, 3D art, filmmaking & more." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mohassanx2.github.io/portfolio/" />
-    <meta property="og:image" content="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755657029/profile_tqv8gv.webp" /> <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="Mohamed Hassan Portfolio" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="3D Artist & Visual Creator" />
-    <meta name="twitter:description" content="The professional portfolio of a multidisciplinary 3D Artist, High-End Retoucher, and AI Visualist based in Cairo." />
-    <meta name="twitter:image" content="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755657029/profile_tqv8gv.webp" /> <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Mohamed Hassan | 3D Artist & Visual Creator - محمد حسن</title>
+    
+    <!-- Meta Tags for SEO and Social Media -->
+    <meta name="description" content="محترف في الفنون ثلاثية الأبعاد والمحتوى البصري الإبداعي - تصميم، تعديل صور، فيديو، ذكاء اصطناعي">
+    <meta name="keywords" content="تصميم ثلاثي الأبعاد, تعديل صور, فيديو, ذكاء اصطناعي, فن بصري, مصر">
+    <meta name="author" content="Mohamed Hassan">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohassanx2.github.io/portfolio/">
+    <meta property="og:title" content="Mohamed Hassan | فنان ثلاثي الأبعاد ومبدع بصري">
+    <meta property="og:description" content="أحدث أعمالي الإبداعية - تعديل الصور، الفن ثلاثي الأبعاد، صناعة الأفلام والمزيد">
+    <meta property="og:image" content="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755657029/profile_tqv8gv.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohamed Hassan | فنان ثلاثي الأبعاد">
+    <meta name="twitter:description" content="محترف في الفنون ثلاثية الأبعاد والمحتوى البصري">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755657029/profile_tqv8gv.webp">
+    
+    <!-- Preloading and DNS prefetch for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="css/style.css">
-    </head>
-<body data-theme="dark">
+    <link rel="preconnect" href="https://res.cloudinary.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts with optimized loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&display=swap"></noscript>
+    
+    <!-- Font Awesome with optimized loading -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    
+    <!-- AOS Animation Library -->
+    <link rel="preload" href="https://unpkg.com/aos@next/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"></noscript>
 
+    <style>
+        /* ====================================
+           تصميم محسّن للأجهزة المتعددة
+           Enhanced Multi-Device Design
+           ==================================== */
+        
+        :root {
+            /* خطوط محسّنة للعربية */
+            --primary-font: 'Cairo', 'Segoe UI', 'system-ui', sans-serif;
+            --title-font: 'Amiri', 'Times New Roman', serif;
+            
+            /* أحجام خطوط متجاوبة */
+            --fs-xs: clamp(0.75rem, 0.5vw + 0.5rem, 0.875rem);
+            --fs-sm: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
+            --fs-base: clamp(1rem, 0.5vw + 0.875rem, 1.125rem);
+            --fs-lg: clamp(1.125rem, 0.5vw + 1rem, 1.25rem);
+            --fs-xl: clamp(1.25rem, 1vw + 1rem, 1.5rem);
+            --fs-2xl: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+            --fs-3xl: clamp(2rem, 2vw + 1.5rem, 3rem);
+            --fs-4xl: clamp(2.5rem, 3vw + 2rem, 4rem);
+            --fs-5xl: clamp(3rem, 4vw + 2.5rem, 5.5rem);
+            
+            /* ألوان محسّنة */
+            --bg-color: #0a0a0a;
+            --surface-color: #1a1a1a;
+            --card-color: #222222;
+            --text-color: #e5e5e5;
+            --text-secondary: #b0b0b0;
+            --primary-color: #ffffff;
+            --accent-color: #D4AF37;
+            --accent-secondary: #B8960B;
+            --accent-gradient: linear-gradient(135deg, #D4AF37 0%, #F4D03F 50%, #D4AF37 100%);
+            
+            /* متغيرات التباعد المتجاوب */
+            --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+            --space-sm: clamp(0.75rem, 1.5vw, 1rem);
+            --space-md: clamp(1rem, 2vw, 1.5rem);
+            --space-lg: clamp(1.5rem, 3vw, 2.5rem);
+            --space-xl: clamp(2rem, 4vw, 4rem);
+            --space-2xl: clamp(3rem, 6vw, 6rem);
+            
+            /* أحجام اللمس المحسّنة للموبايل */
+            --touch-target: 44px;
+            --touch-target-lg: 56px;
+            
+            /* الظلال والحدود */
+            --shadow-primary: 0 10px 40px rgba(212, 175, 55, 0.15);
+            --shadow-card: 0 15px 35px rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+            --border-color: rgba(212, 175, 55, 0.2);
+            
+            /* الانتقالات السلسة */
+            --transition-fast: 0.3s ease;
+            --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* وضع النهار المحسّن */
+        [data-theme="light"] {
+            --bg-color: #fafafa;
+            --surface-color: #ffffff;
+            --card-color: #f8f9fa;
+            --text-color: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --primary-color: #000000;
+            --accent-color: #B8860B;
+            --accent-secondary: #9A7209;
+        }
+
+        /* دعم الحركة المحدودة */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* تحسين إمكانية الوصول */
+        *:focus-visible {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* إعادة تعيين وأساسيات محسّنة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--touch-target-lg);
+            direction: rtl;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--surface-color) 50%, var(--bg-color) 100%);
+            background-attachment: fixed;
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+            transition: all var(--transition-smooth);
+            font-size: var(--fs-base);
+            /* تحسين عرض النص */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* الحاوي المحسّن */
+        .container {
+            width: min(90%, 1400px);
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            position: relative;
+        }
+
+        /* دعم المنطقة الآمنة للأجهزة ذات الشق */
+        @supports(padding: max(0px)) {
+            .container {
+                padding-left: max(var(--space-md), env(safe-area-inset-left));
+                padding-right: max(var(--space-md), env(safe-area-inset-right));
+            }
+        }
+
+        /* الطباعة المحسّنة */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--title-font);
+            color: var(--primary-color);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            transition: color var(--transition-fast);
+        }
+
+        h1 { font-size: var(--fs-5xl); }
+        h2 { font-size: var(--fs-4xl); }
+        h3 { font-size: var(--fs-3xl); }
+        h4 { font-size: var(--fs-2xl); }
+        h5 { font-size: var(--fs-xl); }
+        h6 { font-size: var(--fs-lg); }
+
+        p {
+            font-size: var(--fs-base);
+            margin-bottom: var(--space-md);
+            color: var(--text-color);
+            line-height: 1.7;
+            max-width: 65ch;
+        }
+
+        /* شريط التنقل المحسّن */
+        .navbar {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: var(--space-md) 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all var(--transition-smooth);
+        }
+
+        [data-theme="light"] .navbar {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .navbar__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar__logo {
+            font-family: var(--title-font);
+            font-size: var(--fs-2xl);
+            font-weight: 700;
+            color: var(--primary-color);
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .navbar__logo:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar__menu {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar__link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: var(--fs-sm);
+            font-weight: 500;
+            padding: var(--space-sm) 0;
+            position: relative;
+            transition: all var(--transition-fast);
+            min-height: var(--touch-target);
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width var(--transition-fast);
+        }
+
+        .navbar__link:hover::after,
+        .navbar__link.active::after {
+            width: 100%;
+        }
+
+        /* الأزرار المحسّنة */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            min-height: var(--touch-target);
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            background: transparent;
+            font-size: var(--fs-base);
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: all var(--transition-smooth);
+            text-decoration: none;
+            z-index: 1;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-gradient);
+            transition: left var(--transition-smooth);
+            z-index: -1;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus-visible {
+            color: var(--bg-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .cta-button:hover::before,
+        .cta-button:focus-visible::before {
+            left: 0;
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* القسم الرئيسي المحسّن */
+        .hero-section {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(10,10,10,0.9), rgba(26,26,26,0.7)), 
+                        url('https://res.cloudinary.com/dg3jhh10o/image/upload/v1755657029/profile_tqv8gv.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+            padding: var(--space-xl) 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+
+        .hero-section__content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-lg);
+        }
+
+        .hero-greeting {
+            font-size: var(--fs-base);
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: var(--space-md);
+            opacity: 0.9;
+        }
+
+        .hero-section__title {
+            font-size: var(--fs-5xl);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite alternate;
+            line-height: 1.1;
+        }
+
+        @keyframes titleGlow {
+            0% { filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5)); }
+            100% { filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.8)); }
+        }
+
+        .hero-section__subtitle {
+            font-size: var(--fs-xl);
+            color: var(--text-color);
+            margin-bottom: var(--space-2xl);
+            min-height: 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .hero-social {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            margin-top: var(--space-lg);
+        }
+
+        .hero-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--touch-target-lg);
+            height: var(--touch-target-lg);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--text-color);
+            font-size: var(--fs-lg);
+            transition: all var(--transition-smooth);
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hero-social a:hover,
+        .hero-social a:focus-visible {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: var(--shadow-primary);
+        }
+
+        /* قائمة الهامبرغر المحسّنة */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            background: none;
+            border: none;
+            z-index: 1001;
+            padding: var(--space-sm);
+            min-width: var(--touch-target);
+            min-height: var(--touch-target);
+            align-items: center;
+            justify-content: center;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hamburger__bar {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            transition: all var(--transition-fast);
+            border-radius: 2px;
+        }
+
+        .hamburger.active .hamburger__bar:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.active .hamburger__bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .hamburger__bar:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* زر تغيير الثيم */
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--border-color);
+            color: var(--text-color);
+            font-size: var(--fs-lg);
+            padding: var(--space-sm);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            width: var(--touch-target);
+            height: var(--touch-target);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .theme-toggle:hover,
+        .theme-toggle:focus-visible {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: rotate(180deg) scale(1.1);
+        }
+
+        /* التصميم المتجاوب المحسّن */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .navbar__menu {
+                position: fixed;
+                left: -100%;
+                top: calc(var(--touch-target-lg) + var(--space-lg));
+                flex-direction: column;
+                background: var(--surface-color);
+                width: 100%;
+                height: calc(100vh - var(--touch-target-lg) - var(--space-lg));
+                text-align: center;
+                transition: left var(--transition-smooth);
+                gap: 0;
+                z-index: 999;
+                padding: var(--space-xl) var(--space-lg);
+                border-top: 1px solid var(--border-color);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+            }
+            
+            .navbar__menu.active {
+                left: 0;
+            }
+            
+            .navbar__item {
+                padding: var(--space-lg) 0;
+                width: 100%;
+                border-bottom: 1px solid var(--border-color);
+            }
+            
+            .navbar__link {
+                font-size: var(--fs-lg);
+                padding: var(--space-md);
+                display: block;
+                width: 100%;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--space-sm);
+            }
+            
+            .hero-section__title {
+                font-size: var(--fs-3xl);
+            }
+            
+            .hero-social {
+                gap: var(--space-sm);
+                flex-wrap: wrap;
+            }
+        }
+
+        /* تحسينات الأداء */
+        img, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--border-radius);
+            loading: lazy;
+        }
+
+        .hero-section img {
+            loading: eager;
+        }
+
+        /* شريط التحميل السلس */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #080808 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .page-loader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader-content {
+            text-align: center;
+            color: var(--accent-color);
+        }
+        
+        .loader-text {
+            font-family: var(--title-font);
+            font-size: var(--fs-2xl);
+            margin-bottom: var(--space-lg);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+        
+        .loader-spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(212, 175, 55, 0.3);
+            border-top: 3px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تأثيرات التمرير */
+        ::selection {
+            background: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--surface-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-gradient);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #F4D03F 0%, #D4AF37 50%, #B8960B 100%);
+        }
+
+        /* التحسينات الأخيرة للموبايل */
+        .is-mobile .hero-section {
+            background-attachment: scroll;
+        }
+
+        .is-touch button:active {
+            transform: scale(0.98);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--surface-color);
+            padding: var(--space-lg) 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            margin-top: var(--space-2xl);
+        }
+
+        .site-footer p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- شاشة التحميل -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-text">محمد حسن</div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- شريط التنقل -->
     <nav class="navbar">
-        <div class="navbar__container">
-            <a href="index.html" class="navbar__logo">MOHAMED HASSAN</a>
+        <div class="container navbar__container">
+            <a href="#" class="navbar__logo">محمد حسن</a>
+            
+            <ul class="navbar__menu" id="navbar-menu">
+                <li class="navbar__item">
+                    <a href="#about" class="navbar__link">عني</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#services" class="navbar__link">خدماتي</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#portfolio" class="navbar__link">أعمالي</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#contact" class="navbar__link">تواصل</a>
+                </li>
+            </ul>
+            
             <div class="navbar__actions">
-                 <ul id="navbar-menu" class="navbar__menu">
-                    <li class="navbar__item"><a href="index.html" class="navbar__link active">Home</a></li>
-                    <li class="navbar__item"><a href="about.html" class="navbar__link">About</a></li>
-                    <li class="navbar__item"><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
-                    <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
-                </ul>
-                <button class="theme-toggle" aria-label="Toggle light/dark theme">
+                <button class="theme-toggle" aria-label="تغيير الثيم">
                     <i class="fas fa-moon"></i>
                 </button>
-                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu">
+                <button class="hamburger" aria-label="القائمة" aria-expanded="false">
                     <span class="hamburger__bar"></span>
                     <span class="hamburger__bar"></span>
                     <span class="hamburger__bar"></span>
@@ -46,67 +728,331 @@
         </div>
     </nav>
 
-    <header class="hero-section" style="background-image: url('https://res.cloudinary.com/dg3jhh10o/image/upload/v1755657029/profile_tqv8gv.webp');">
-        <div class="hero-section__overlay"></div>
+    <!-- القسم الرئيسي -->
+    <header class="hero-section">
         <div class="hero-section__content" data-aos="fade-in" data-aos-duration="1500">
-            <h1 class="hero-section__title">Mohamed Hassan</h1>
-            <p class="hero-section__subtitle">3D Artist | High-End Retoucher | Filmmaker | AI Visualist</p>
-            <a href="portfolio.html" class="cta-button">Explore My Work</a>
+            <div class="hero-greeting" data-aos="fade-down" data-aos-delay="200">
+                مرحباً بك في عالمي الإبداعي
+            </div>
+            <h1 class="hero-section__title" data-aos="zoom-in" data-aos-delay="400">
+                محمد حسن
+            </h1>
+            <p class="hero-section__subtitle" data-aos="fade-up" data-aos-delay="600">
+                فنان ثلاثي الأبعاد ومبدع المحتوى البصري
+            </p>
+            
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="800">
+                <a href="#portfolio" class="cta-button">
+                    <span>استكشف أعمالي</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="#contact" class="cta-button">
+                    <i class="fas fa-envelope"></i>
+                    <span>تواصل معي</span>
+                </a>
+            </div>
+            
+            <!-- روابط التواصل الاجتماعي -->
+            <div class="hero-social" data-aos="fade-up" data-aos-delay="1000">
+                <a href="https://www.linkedin.com/in/mohamed-hassan-4b89a6339/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.behance.net/mohassanx" target="_blank" aria-label="Behance">
+                    <i class="fab fa-behance"></i>
+                </a>
+                <a href="https://www.instagram.com/mo.hassanx" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/xmohassanx" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/201128939061" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
         </div>
-        <a href="#about-preview-section" class="scroll-down-arrow" aria-label="Scroll to next section">
-            <i class="fas fa-chevron-down"></i>
-        </a>
     </header>
 
     <main>
-        <section id="about-preview-section" class="about-preview">
-            <div class="container about-preview__container">
-                <div class="about-preview__image" data-aos="fade-right">
-                    <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755657029/profile_tqv8gv.webp" alt="A professional headshot of Mohamed Hassan.">
-                </div>
-                <div class="about-preview__text" data-aos="fade-left">
-                    <h2 class="section-title">Visual Artist & Digital Creator</h2>
-                    <p>With over 5 years of experience, I specialize in bringing ideas to life through a blend of technical skill and artistic vision. From high-end photo retouching and complex 3D modeling to innovative AI-generated media, my work is driven by a passion for creating compelling visuals.</p>
-                    <a href="about.html" class="cta-button">Learn More About Me</a>
+        <!-- قسم نبذة عني -->
+        <section id="about" class="container" style="padding: var(--space-2xl) 0;">
+            <div data-aos="fade-up">
+                <h2>نبذة عني</h2>
+                <p>
+                    مرحباً، أنا محمد حسن، فنان ثلاثي الأبعاد ومبدع محتوى بصري محترف من مصر. 
+                    أتخصص في إنشاء تجارب بصرية مذهلة تجمع بين التقنية المتطورة والرؤية الفنية الإبداعية.
+                </p>
+                <p>
+                    مع أكثر من 5 سنوات من الخبرة، أقوم بتحويل الأفكار إلى واقع بصري من خلال مزيج من 
+                    المهارات التقنية والرؤية الفنية. من تعديل الصور عالي الجودة والنمذجة ثلاثية الأبعاد المعقدة 
+                    إلى المحتوى المبتكر المُنتج بالذكاء الاصطناعي.
+                </p>
+            </div>
+        </section>
+
+        <!-- قسم الخدمات -->
+        <section id="services" class="container" style="padding: var(--space-2xl) 0; background: var(--surface-color); margin: var(--space-2xl) 0; border-radius: var(--border-radius);">
+            <div data-aos="fade-up">
+                <h2>خدماتي</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg); margin-top: var(--space-xl);">
+                    <div style="background: var(--card-color); padding: var(--space-lg); border-radius: var(--border-radius); text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-cube" style="font-size: var(--fs-3xl); color: var(--accent-color); margin-bottom: var(--space-md);"></i>
+                        <h3>التصميم ثلاثي الأبعاد</h3>
+                        <p>نمذجة وتحريك ثلاثي الأبعاد احترافي لمختلف المشاريع</p>
+                    </div>
+                    <div style="background: var(--card-color); padding: var(--space-lg); border-radius: var(--border-radius); text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-palette" style="font-size: var(--fs-3xl); color: var(--accent-color); margin-bottom: var(--space-md);"></i>
+                        <h3>تعديل الصور</h3>
+                        <p>تعديل صور احترافي عالي الجودة لمعايير البث التلفزيوني</p>
+                    </div>
+                    <div style="background: var(--card-color); padding: var(--space-lg); border-radius: var(--border-radius); text-align: center;" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-robot" style="font-size: var(--fs-3xl); color: var(--accent-color); margin-bottom: var(--space-md);"></i>
+                        <h3>المحتوى بالذكاء الاصطناعي</h3>
+                        <p>إنشاء محتوى مبتكر باستخدام أحدث تقنيات الذكاء الاصطناعي</p>
+                    </div>
+                    <div style="background: var(--card-color); padding: var(--space-lg); border-radius: var(--border-radius); text-align: center;" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-video" style="font-size: var(--fs-3xl); color: var(--accent-color); margin-bottom: var(--space-md);"></i>
+                        <h3>إنتاج الفيديو</h3>
+                        <p>صناعة أفلام وفيديوهات احترافية من البداية للنهاية</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="featured-work">
-            <div class="container" data-aos="fade-up">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="featured-grid">
-                    <a href="projects/AI Projects/sipes-ai.html" class="featured-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755686814/thubnail_publki.webp" alt="A colorful, abstract visual generated by AI for SIPES paints." loading="lazy">
-                        <div class="featured-card__overlay"><h3>AI Video for SIPES</h3></div>
-                    </a>
-                    <a href="projects/Retouching/masar-egbary.html" class="featured-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687456/ahmed-dash_ddwtbe.webp" alt="A professionally retouched promotional shot for the TV series Masar Ejbary." loading="lazy">
-                        <div class="featured-card__overlay"><h3>"Masar Ejbary" TV Series</h3></div>
-                    </a>
-                     <a href="projects/vfx/ring.html" class="featured-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755739098/vfx1_ijtvqt.webp" alt="VFX scene of a ring flying through the air above Mall of Egypt" loading="lazy">
-                        <div class="featured-card__overlay"><h3>VFX & 3D Art</h3></div>
-                    </a>
+        <!-- قسم الأعمال المميزة -->
+        <section id="portfolio" class="container" style="padding: var(--space-2xl) 0;">
+            <div data-aos="fade-up">
+                <h2>أعمالي المميزة</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg); margin-top: var(--space-xl);">
+                    <div style="background: var(--card-color); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-card);" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755686814/thubnail_publki.webp" alt="مشروع SIPES" style="width: 100%; height: 250px; object-fit: cover;">
+                        <div style="padding: var(--space-lg);">
+                            <h3>حملة SIPES للدهانات</h3>
+                            <p>محتوى فيديو مُنتج بالذكاء الاصطناعي حقق أكثر من مليون مشاهدة</p>
+                            <div style="display: flex; gap: var(--space-md); margin-top: var(--space-md); font-size: var(--fs-sm); color: var(--accent-color);">
+                                <span><i class="fas fa-eye"></i> +1M مشاهدة</span>
+                                <span><i class="fas fa-heart"></i> +50K إعجاب</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: var(--card-color); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-card);" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687456/ahmed-dash_ddwtbe.webp" alt="مسار اجباري" style="width: 100%; height: 250px; object-fit: cover;">
+                        <div style="padding: var(--space-lg);">
+                            <h3>مسلسل مسار اجباري</h3>
+                            <p>تعديل صور احترافي لمعايير البث التلفزيوني</p>
+                        </div>
+                    </div>
+                    <div style="background: var(--card-color); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-card);" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755739098/vfx1_ijtvqt.webp" alt="تأثيرات بصرية" style="width: 100%; height: 250px; object-fit: cover;">
+                        <div style="padding: var(--space-lg);">
+                            <h3>تأثيرات بصرية ثلاثية الأبعاد</h3>
+                            <p>تحريك ثلاثي الأبعاد ديناميكي مع دمج فوتوغرافي واقعي</p>
+                        </div>
+                    </div>
                 </div>
-                 <div class="view-all-link" data-aos="fade-up">
-                    <a href="portfolio.html">View All Projects &rarr;</a>
+            </div>
+        </section>
+
+        <!-- قسم التواصل -->
+        <section id="contact" class="container" style="padding: var(--space-2xl) 0; background: var(--surface-color); margin: var(--space-2xl) 0; border-radius: var(--border-radius);">
+            <div data-aos="fade-up">
+                <h2>تواصل معي</h2>
+                <p>مستعد لبدء مشروعك التالي؟ دعنا نتعاون ونبدع شيئاً استثنائياً معاً.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg); margin-top: var(--space-xl);">
+                    <div style="text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-envelope" style="font-size: var(--fs-2xl); color: var(--accent-color); margin-bottom: var(--space-md);"></i>
+                        <h3>البريد الإلكتروني</h3>
+                        <p>للاستفسارات المهنية</p>
+                    </div>
+                    <div style="text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fab fa-whatsapp" style="font-size: var(--fs-2xl); color: var(--accent-color); margin-bottom: var(--space-md);"></i>
+                        <h3>واتساب</h3>
+                        <p>للتواصل السريع</p>
+                        <a href="https://wa.me/201128939061" class="cta-button" style="margin-top: var(--space-md);">
+                            <span>تواصل الآن</span>
+                        </a>
+                    </div>
+                    <div style="text-align: center;" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-globe" style="font-size: var(--fs-2xl); color: var(--accent-color); margin-bottom: var(--space-md);"></i>
+                        <h3>الشبكات الاجتماعية</h3>
+                        <p>تابع أحدث أعمالي</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     
+    <!-- Footer -->
     <footer class="site-footer">
-        <div class="container"><p>&copy; 2025 Mohamed Hassan. All Rights Reserved.</p></div>
+        <div class="container">
+            <p>&copy; 2025 محمد حسن. جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
 
+    <!-- JavaScript محسّن للأداء والتوافق مع الأجهزة -->
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
-    <script src="js/script.js" defer></script>
+    
+    <script>
+        // تحميل الصفحة
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('fade-out');
+                setTimeout(() => {
+                    document.getElementById('pageLoader').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحديد نوع الجهاز
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            
+            if (isMobile) document.body.classList.add('is-mobile');
+            if (isTouch) document.body.classList.add('is-touch');
+
+            // تهيئة مكتبة AOS للحركات
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 1000,
+                    once: true,
+                    easing: 'ease-out-cubic',
+                    offset: 100
+                });
+            }
+
+            // التنقل المحسّن للموبايل
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.navbar__menu');
+            const navLinks = document.querySelectorAll('.navbar__link');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const isActive = this.classList.contains('active');
+                    
+                    this.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                    document.body.style.overflow = isActive ? '' : 'hidden';
+                    this.setAttribute('aria-expanded', !isActive);
+                });
+                
+                // إغلاق القائمة عند النقر على الروابط
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+                
+                // إغلاق القائمة عند النقر خارجها
+                document.addEventListener('click', (e) => {
+                    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            // تغيير الثيم المحسّن
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                const icon = themeToggle.querySelector('i');
+                
+                function applyTheme(theme) {
+                    document.body.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                    
+                    if (icon) {
+                        icon.style.transform = 'scale(0) rotate(180deg)';
+                        setTimeout(() => {
+                            icon.className = theme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+                            icon.style.transform = 'scale(1) rotate(0deg)';
+                        }, 150);
+                    }
+                }
+                
+                themeToggle.addEventListener('click', () => {
+                    const currentTheme = document.body.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                    applyTheme(newTheme);
+                });
+                
+                // تطبيق الثيم المحفوظ
+                const savedTheme = localStorage.getItem('theme') || 'dark';
+                applyTheme(savedTheme);
+            }
+
+            // تحسين التفاعل اللمسي
+            const buttons = document.querySelectorAll('.cta-button, .theme-toggle, .hamburger');
+            buttons.forEach(button => {
+                button.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
+                }, { passive: true });
+                
+                button.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }, { passive: true });
+            });
+
+            // التمرير السلس للروابط الداخلية
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            anchorLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // تحسين أداء التمرير
+            let ticking = false;
+            function updateScrollState() {
+                const scrolled = window.pageYOffset;
+                const navbar = document.querySelector('.navbar');
+                
+                if (scrolled > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                
+                ticking = false;
+            }
+            
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateScrollState);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // تحسين معالجة تغيير حجم الشاشة
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    // إعادة تهيئة AOS إذا لزم الأمر
+                    if (typeof AOS !== 'undefined') {
+                        AOS.refresh();
+                    }
+                }, 250);
+            }, { passive: true });
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
