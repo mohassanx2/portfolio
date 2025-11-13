@@ -1,17 +1,26 @@
+/* ==================================================
+    STYLE.CSS - V7 - 🎯 "SPOTLIGHT REVEAL" FINAL 🎯
+    Developer: Gemini (Based on User's Pro Suggestions)
+    ================================================== */
+
+/* 🎯 1. استيراد الخطوط (User Suggestion #1) 🎯 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700;800&display=swap');
+
+/* 1. IMPORTS & GLOBAL VARIABLES */
 
 :root {
     /* الخطوط */
     --primary-font: 'Lato', sans-serif;
     --title-font: 'Poppins', sans-serif; 
 
-    /* الألوان */
+    /* الألوان (User Suggestions) */
     --bg-color: #0F172A;        
     --surface-color: #141C2B;   
     --text-color: #B8C2D6;      
     --text-secondary: #A7B4C8;  
     --primary-color: #FFFFFF;
     
-    /* التدرجات اللونية */
+    /* التدرجات اللونية (User Suggestions) */
     --accent-color: #14C58A; 
     --accent-gradient-start: #14C58A; 
     --accent-gradient-end: #4E9CFF;   
@@ -45,18 +54,34 @@ body {
     line-height: 1.7; 
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease; 
+    font-weight: 400; /* 🎯 (User Suggestion #2) 🎯 */
     
     background-image:
         radial-gradient(circle at 50% 0%, rgba(78, 156, 255, 0.1), transparent 70%),
         linear-gradient(180deg, var(--surface-color), var(--bg-color) 400px);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 }
+/* 🎯 إضافة الـ Glow الثابت 🎯 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 50% 0%, rgba(78, 156, 255, 0.1), transparent 70%);
+    background-repeat: no-repeat;
+    z-index: -1; 
+    pointer-events: none; 
+}
+
 a { color: var(--accent-color); text-decoration: none; transition: color 0.3s ease; }
 a:hover { color: var(--primary-color); }
 
+/* 🎯 3. تحسين الـ Focus (User Suggestion #5) 🎯 */
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid var(--accent-gradient-end);
+    outline: 3px solid rgba(78,156,255,0.95); 
     outline-offset: 3px;
     border-radius: 3px;
 }
@@ -67,15 +92,31 @@ h1, h2, h3, h4 {
     transition: color 0.3s ease;
     line-height: 1.2; 
     letter-spacing: 0.5px; 
+    overflow-wrap: break-word; /* 🎯 (Safety Net) 🎯 */
+    word-break: break-word;
 }
 h1 { font-weight: 800; }
 h2 { font-weight: 700; }
 h3 { font-weight: 600; }
 
-p { font-weight: 300; font-size: 1.0rem; margin-bottom: 1rem; }
-img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; }
-.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+/* 🎯 (User Suggestion #2) 🎯 */
+p, .timeline-meta, .project-nav-label { 
+    font-weight: 300; 
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.hero-section__subtitle { font-weight: 300; }
+/* 🎯 (Fluid Typography Safety Net) 🎯 */
+body {
+    font-size: clamp(0.95rem, 0.9rem + 0.5vw, 1.05rem);
+}
+p {
+    font-size: 1em; /* سيأخذ الحجم المرن من body */
+    margin-bottom: 1rem;
+}
 
+
+/* 🎯 4. تحسين الـ Gloss للأزرار (User Suggestion #6) 🎯 */
 .cta-button { 
     display: inline-block; 
     padding: 12px 30px; 
@@ -100,14 +141,19 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
     top: 0; left: -50%; 
     width: 100%; height: 100%;
     background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent);
-    opacity: 0.25; 
+    opacity: 0.18; 
     pointer-events: none;
     transform: skewX(-20deg);
+    transition: transform 0.45s ease; 
 }
 .cta-button:hover { 
     background-position: right center; 
     color: var(--primary-color);
     transform: translateY(-2px);
+}
+.cta-button:hover::before {
+    transform: translateX(80%) skewX(-20deg);
+    opacity: 0.22;
 }
 
 .section-title { 
@@ -133,6 +179,14 @@ img, video { max-width: 100%; height: auto; display: block; border-radius: 8px; 
     left: 50%;
     transform: translateX(-50%);
 }
+/* 🎯 5. تحسين العناوين في Light Mode (User Suggestion #4) 🎯 */
+body[data-theme="light"] .section-title {
+    color: var(--primary-color);
+    background: none;
+    -webkit-background-clip: auto;
+    background-clip: auto;
+    text-shadow: none;
+}
 .separator { border: none; height: 1px; background-color: var(--border-color); margin: 1.5rem 0; }
 
 /* 3. NAVIGATION BAR */
@@ -157,6 +211,7 @@ body[data-theme="light"] .navbar { background-color: rgba(255, 255, 255, 0.8); }
     color: var(--primary-color);
     font-weight: 700;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    white-space: nowrap; /* 🎯 (من تعديل سابق) 🎯 */
 }
 .navbar__menu { display: flex; list-style: none; gap: 2rem; align-items: center; }
 
@@ -225,16 +280,25 @@ body[data-theme="light"] .navbar { background-color: rgba(255, 255, 255, 0.8); }
 .hero-section__overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); } 
 body[data-theme="light"] .hero-section__overlay { background-color: rgba(255, 255, 255, 0.2); }
 .hero-section__content { position: relative; z-index: 2; }
-.hero-section__title { font-size: 5rem; letter-spacing: 5px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+/* 🎯 6. تحسين عنوان الهيرو (User Suggestion #3) 🎯 */
+.hero-section__title { 
+    font-size: 5rem; 
+    letter-spacing: 2px; 
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5); 
+}
 body[data-theme="light"] .hero-section__title { color: #0F172A; text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
-.hero-section__subtitle { font-size: 1.2rem; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; color: var(--text-color); }
+.hero-section__subtitle { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-color); }
 body[data-theme="light"] .hero-section__subtitle { color: #334155; }
-.hero-section .cta-button { animation: pulse 2.5s infinite; }
-/* ... (الكود الخاص بـ .hero-section .cta-button موجود هنا) ... */
+/* 🎯 6. تعديل زرار الهيرو (Glow ثابت) 🎯 */
+.hero-section .cta-button { 
+    /* animation: pulse 2.5s infinite; */ /* (تم إلغاء الأنيميشن) */
+    box-shadow: 
+        0 0 15px rgba(78, 156, 255, 0.5), 
+        0 4px 15px rgba(0,0,0,0.2);
+}
 
 .scroll-down-arrow { 
     position: absolute; 
-    /* 🎯 تعديل: رفعناه من 85px إلى 100px 🎯 */
     bottom: 100px; 
     left: 50%; 
     z-index: 3; 
@@ -242,8 +306,6 @@ body[data-theme="light"] .hero-section__subtitle { color: #334155; }
     font-size: 2rem; 
     animation: bounce 2s infinite; 
 }
-
-/* 🎯 بداية الكود المضاف (للنص + الأنيميشن) 🎯 */
 .scroll-down-text {
     display: block;
     font-size: 0.8rem;
@@ -252,28 +314,19 @@ body[data-theme="light"] .hero-section__subtitle { color: #334155; }
     letter-spacing: 2px;
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
-    
-    /* أنيميشن خفيف للظهور والاختفاء مع السهم */
     animation: textBounce 2s infinite;
-    animation-delay: 0.1s; /* تأخير بسيط عن السهم */
+    animation-delay: 0.1s; 
 }
-
-/* تعديل بسيط على أنيميشن السهم */
 @keyframes bounce { 
     0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); } 
     40% { transform: translateX(-50%) translateY(-20px); opacity: 1; } 
     60% { transform: translateX(-50%) translateY(-10px); }
-    81% { opacity: 0; } /* للتأكد من اختفاءه مع النص */
+    81% { opacity: 0; } 
 }
-
-/* أنيميشن للنص ليتوافق مع السهم */
 @keyframes textBounce {
     0%, 20%, 50%, 80%, 100% { opacity: 1; }
     81% { opacity: 0; }
 }
-/* 🎯 نهاية الكود المضاف 🎯 */
-
-/* ... (باقي كود القسم الرابع مثل .about-preview) ... */
 
 .about-preview { padding: 5rem 0; }
 .about-preview__container { display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; }
@@ -344,73 +397,90 @@ body[data-theme="light"] .hero-section__subtitle { color: #334155; }
 }
 .portfolio-item.hidden { display: none; }
 .portfolio-item__media { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-.portfolio-item__overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.2); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 1.5rem; text-align: center; transition: background-color 0.3s ease; }
-.portfolio-item:hover .portfolio-item__overlay { background-color: rgba(15, 23, 42, 0.7); }
-.portfolio-item__overlay h3 { font-size: 1.5rem; color: #FFFFFF; position: absolute; top: 50%; left: 50%; width: 90%; transform: translate(-50%, -50%); opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; font-weight: 700; }
-.portfolio-item:hover .portfolio-item__overlay h3 { opacity: 1; visibility: visible; transform: translate(-50%, -60%); } 
 
 /* ================================================================
-   🎯 8. تعديل "الزر المتحول" الإبداعي (User Request) 🎯
+   🎯 7. الستايل الجديد "SPOTLIGHT REVEAL" 🎯
    ================================================================ */
 
-.portfolio-item__view-btn { 
-    /* 1. الشكل الأساسي (الدائرة) */
-    width: 45px;
-    height: 45px;
-    border-radius: 50%; /* دائرة كاملة */
-    padding: 0; /* لإزالة أي مسافات */
-    font-size: 0; /* لإخفاء النص "View Project" */
-    letter-spacing: 0;
-    text-transform: none;
+/* 1. الأوفرلاي (الوضع الافتراضي: في الأسفل) */
+.portfolio-item__overlay { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    height: auto;
+    background: linear-gradient(to top, rgba(20, 28, 43, 0.9) 0%, transparent 100%);
+    padding: 1.5rem;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-end; 
     
-    /* 2. الخصائص المشتركة */
-    display: flex; /* لاستخدامه كـ container للأيقونة */
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to right, var(--accent-gradient-start), var(--accent-gradient-end));
-    background-size: 200% auto;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 2. العنوان (الوضع الافتراضي: ظاهر في الأسفل) */
+.portfolio-item__overlay h3 { 
+    font-size: 1.3rem; 
     color: #FFFFFF; 
-    margin-top: auto; 
-    position: relative; 
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); /* أنعم transition */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    opacity: 1; 
-    transform: translateY(0);
-    overflow: hidden; /* لإخفاء النص وهو بيتغير */
-}
-
-/* 3. إظهار الأيقونة داخل الدائرة */
-.portfolio-item__view-btn .fas { 
-    font-size: 0.85rem; /* إظهار الأيقونة */
-    margin: 0; /* إزالة أي هوامش قديمة */
-    transition: transform 0.3s ease;
-}
-
-/* 4. عند الـ Hover على (صورة المشروع) */
-.portfolio-item:hover .portfolio-item__view-btn {
-    /* 5. التحول إلى (كبسولة) */
-    width: auto; /* السماح بعرض النص */
-    height: 45px;
-    padding: 12px 24px; /* */
-    border-radius: 50px; /* */
-    
-    /* 6. إظهار النص */
-    font-size: 0.85rem; /* */
-    text-transform: uppercase;
     font-weight: 700;
+    position: relative;
+    width: 100%;
+    text-align: center; 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 3. الزر (الوضع الافتراضي: مخفي) */
+.portfolio-item__view-btn {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid;
+    border-image: linear-gradient(to right, var(--accent-gradient-start), var(--accent-gradient-end)) 1;
+    color: var(--primary-color);
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
     letter-spacing: 1px;
+    border-radius: 50px;
+    margin-top: 1rem;
     
-    /* 7. تأثيرات الـ Hover العادية */
-    background-position: right center; 
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease 0.1s; 
+    cursor: pointer;
+}
+
+/* 4. عند الـ HOVER على الكارت كله */
+.portfolio-item:hover .portfolio-item__overlay {
+    height: 100%; 
+    background: rgba(20, 28, 43, 0.85);
+    justify-content: center; 
+}
+
+/* 5. عند الـ HOVER (حركة العنوان) */
+.portfolio-item:hover .portfolio-item__overlay h3 {
+    transform: translateY(-10px); 
+}
+
+/* 6. عند الـ HOVER (ظهور الزر) */
+.portfolio-item:hover .portfolio-item__view-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 7. الـ HOVER الخاص بالزر نفسه */
+.portfolio-item__view-btn:hover {
+    background-image: linear-gradient(to right, var(--accent-gradient-start), var(--accent-gradient-end));
+    border-image: none;
+    color: var(--primary-color);
     transform: scale(1.05);
 }
 
-/* 8. تعديل مكان الأيقونة بعد التمدد */
-.portfolio-item:hover .portfolio-item__view-btn .fas {
-    font-size: 0.8rem; /* */
-    margin-left: 8px; /* */
-    transform: translateX(3px); /* حركة بسيطة للسهم */
-}
+.portfolio-item__view-btn .fas { margin-left: 8px; font-size: 0.8rem; }
 /* ================================================================ */
 
 
@@ -481,9 +551,9 @@ body[data-theme="light"] .info-card { background-color: #EAEAEA; }
 .timeline-meta { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; } 
 body[data-theme="light"] .timeline-meta { color: #666; }
 .timeline-item ul { list-style: disc; padding-left: 1.2rem; }
-/* 🎯 6. تعديل جذري لـ "Technical Skills" (User Request) 🎯 */
+
 .skills-group {
-    margin-bottom: 1.5rem; /* مسافة بين كل مجموعة */
+    margin-bottom: 1.5rem; 
 }
 .skills-group:last-of-type {
     margin-bottom: 0;
@@ -498,46 +568,40 @@ body[data-theme="light"] .timeline-meta { color: #666; }
     font-family: var(--primary-font); 
     text-transform: uppercase;
     letter-spacing: 1px;
-    white-space: nowrap; /* 🎯 هذا السطر سيمنع انقسام العناوين 🎯 */
 }
 .skills-group h3 i {
     margin-right: 0.75rem;
-    color: var(--accent-color); /* */
+    color: var(--accent-color); 
     font-size: 1rem;
-    width: 20px; /* لتوحيد المسافات */
+    width: 20px; 
     text-align: center;
 }
 .skill-tags-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px; /* مسافات بين الـ Tags */
+    gap: 8px; 
 }
 .skill-tag { 
     display: inline-block; 
-    /* الستايل الأساسي الباهت */
-    background: rgba(148, 163, 184, 0.05); /* لون خفيف جدًا من الخلفية */
-    color: var(--text-secondary); /* */
+    background: rgba(148, 163, 184, 0.05); 
+    color: var(--text-secondary); 
     padding: 5px 12px; 
-    border-radius: 20px; /* شكل "Pill" */
+    border-radius: 20px; 
     margin: 0; 
     font-size: 0.9rem; 
     font-weight: 400;
-    border: 1px solid var(--border-color); /* */
+    border: 1px solid var(--border-color); 
     
-    /* أنيميشن التحول */
     transition: all 0.3s ease;
 }
-
-/* 🎯 عند الـ Hover: التاغ "ينور" بالتدرج اللوني 🎯 */
 .skill-tag:hover {
-    background-image: linear-gradient(to right, var(--accent-gradient-start), var(--accent-gradient-end)); /* */
-    border-color: var(--accent-gradient-end); /* */
+    background-image: linear-gradient(to right, var(--accent-gradient-start), var(--accent-gradient-end)); 
+    border-color: var(--accent-gradient-end); 
     color: var(--primary-color);
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    cursor: default; /* يفضل عدم تغيير شكل الماوس لأنه ليس لينك */
+    cursor: default; 
 }
-/* ... (باقي الستايلات في قسم 6) ... */
 .software-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 1rem; align-items: center; }
 .software-item img { height: 40px; filter: var(--icon-filter); transition: filter 0.3s ease; }
 .software-item:hover img { filter: none; }
@@ -566,20 +630,19 @@ body[data-theme="light"] .timeline-meta { color: #666; }
     .hamburger.active .hamburger__bar:nth-child(2) { opacity: 0; }
     .hamburger.active .hamburger__bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .hamburger.active .hamburger__bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-	/* 🎯 بداية إصلاحات صفحة About (User Request) 🎯 */
+
+/* 🎯 إصلاحات صفحة About 🎯 */
 .resume-body {
-    flex-direction: column; /* 1. فرض الترتيب العمودي للمحتوى */
-    gap: 0; /* 2. إلغاء الـ gap الأفقي بين العمودين */
+    flex-direction: column; 
+    gap: 0; 
 }
-
 .resume-right-column {
-    margin-top: 2.5rem; /* 3. إضافة مسافة فاصلة رأسية نظيفة */
+    margin-top: 2.5rem; 
+}
+.skills-group h3 {
+    white-space: normal; 
 }
 
-.skills-group h3 {
-    white-space: normal; /* 4. (الأهم) السماح للعناوين بالانقسام على سطرين تاني */
-}
-/* 🎯 نهاية إصلاحات صفحة About 🎯 */
     .about-preview__container { text-align: center; }
     .about-preview__text .section-title, .about-preview__text .section-title::after { margin-left: auto; margin-right: auto; }
     .resume-header, .resume-header__left { flex-direction: column; text-align: center; }
@@ -590,18 +653,18 @@ body[data-theme="light"] .timeline-meta { color: #666; }
         justify-content: center; 
     }
 
-    /* --- Typography Adjustments for Mobile --- */
-    .hero-section__title { font-size: 3rem; }
+    /* 🎯 9. تحسينات الـ Responsive (User Suggestion #7) 🎯 */
+    .hero-section__title { font-size: 3rem; letter-spacing: 1.5px; } 
     .page-title { font-size: 2.5rem; margin-bottom: 2rem; }
     .section-title { font-size: 2.2rem; }
     .project-subtitle { font-size: 1rem; line-height: 1.5; }
     .resume-section-title { font-size: 1.6rem; }
-    p { font-size: 0.95rem; }
+    /* (تم حذف p { font-size: 0.95rem; } لأن body أصبح مرنًا) */
 }
 
 @media (max-width: 480px) {
-    /* --- Further Adjustments for Small Phones --- */
-    .hero-section__title { font-size: 2.4rem; }
+    /* 🎯 9. تحسينات الـ Responsive (User Suggestion #7) 🎯 */
+    .hero-section__title { font-size: 2.4rem; letter-spacing: 1px; }
     .page-title { font-size: 2rem; }
     .section-title { font-size: 1.8rem; }
     #portfolio-filters { gap: 5px; }
@@ -614,16 +677,13 @@ body[data-theme="light"] .timeline-meta { color: #666; }
    10. FIXES & ADDITIONS
    ================================================== */
 
-/* Animation for the hero CTA button */
 @keyframes pulse {
   0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(78, 156, 255, 0.7); } 
   70% { transform: scale(1.03); box-shadow: 0 0 10px 20px rgba(78, 156, 255, 0); }
   100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(78, 156, 255, 0); }
 }
 
-/* Fix for project gallery image aspect ratio */
 .project-gallery img { width: 100%; height: auto; display: block; }
-/* Before & After Gallery Styles */
 .baf-item { background-color: #2c2c2c; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3); display: flex; flex-direction: row; margin-bottom: 1rem; }
 .baf-image { width: 50%; position: relative; }
 .baf-image img { display: block; width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
@@ -723,5 +783,84 @@ body[data-theme="light"] .timeline-meta { color: #666; }
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+}
+/* ==================================================
+   13. DESKTOP ASYMMETRICAL LAYOUT ( 🎯 إضافة جديدة 🎯 )
+   ================================================== */
+
+/* (هذا الكود لن يعمل إلا على الشاشات الأكبر من 1024px) */
+@media (min-width: 1024px) {
+
+    /* 1. إخفاء الـ Navbar العادية على الديسكتوب */
+    /* (ماعدا في الـ Hero) */
+    .desktop-main-layout .navbar {
+        display: none;
+    }
+    /* (إظهارها في الـ Hero) */
+    .hero-section + .desktop-main-layout .navbar {
+        display: block;
+    }
+
+    /* 2. الـ Wrapper الأساسي (يستخدم Grid) */
+    .desktop-main-layout {
+        display: grid;
+        grid-template-columns: 400px 1fr; /* عمود ثابت 400px والباقي متحرك */
+        gap: 2rem;
+        max-width: 1600px; /* تحديد عرض أقصى للتصميم */
+        margin: 0 auto;
+        padding: 0 2rem; /* هوامش بسيطة على الأطراف */
+    }
+
+    /* 3. العمود الشمالي (الثابت) */
+    .sticky-bio-sidebar {
+        position: sticky;
+        top: 100px; /* هيبدأ يثبت بعد 100px من فوق */
+        height: calc(100vh - 100px); /* ارتفاعه بارتفاع الشاشة */
+        overflow-y: auto; /* لو المحتوى أطول، يسمح بالـ scroll */
+        padding-bottom: 2rem;
+    }
+
+    /* 4. تعديلات على كارت الـ Bio عشان يناسب مكانه الجديد */
+    .sticky-bio-sidebar .about-preview__text {
+        text-align: left; /* */
+    }
+    .sticky-bio-sidebar .section-title {
+        text-align: left; /* */
+        font-size: 2.2rem;
+        margin-top: 1.5rem;
+    }
+    .sticky-bio-sidebar .section-title::after {
+        margin: 1rem 0 0 0; /* */
+        left: 0;
+        transform: translateX(0);
+    }
+
+    /* 5. العمود اليميني (المتحرك) */
+    .main-content-area {
+        min-width: 0; /* لإصلاح أي مشاكل في الـ overflow */
+        padding-top: 100px; /* نفس مسافة الـ Top للـ Sidebar */
+    }
+    
+    /* 6. تعديل الفوتر (لأننا نقلناه) */
+    .main-content-area .site-footer {
+        margin-top: 6rem;
+    }
+
+    /* 7. إخفاء الـ "About Preview" من صفحة index الرئيسية */
+    /* (لأنها بقت في الـ Sidebar) */
+    body:has(.sticky-bio-sidebar) #about-preview-section {
+        display: none;
+    }
+}
+
+/* (إصلاح بسيط للموبايل لضمان إخفاء الـ Sidebar) */
+@media (max-width: 1023px) {
+    .sticky-bio-sidebar {
+        display: none;
+    }
+    .main-content-area {
+        /* التأكد إن المحتوى ياخد العرض كامل */
+        width: 100%;
     }
 }
