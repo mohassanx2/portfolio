@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Mohamed Hassan</title>
+    <meta name="description" content="Explore the portfolio of Mohamed Hassan, featuring projects in 3D, AI, retouching, photography, and VFX.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo">MOHAMED HASSAN</a>
+            <div class="navbar__actions">
+                 <ul id="navbar-menu" class="navbar__menu">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="about.html" class="navbar__link">About</a></li>
+                    <li class="navbar__item"><a href="portfolio.html" class="navbar__link">Portfolio</a></li>
+                    <li class="navbar__item"><a href="contact.html" class="navbar__link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu">
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="page-main-content">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">My Work</h1>
+            <div id="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="*">All</button>
+                <button class="filter-btn" data-filter=".renders">3D Work</button>
+                <button class="filter-btn" data-filter=".ai">AI Projects</button>
+                <button class="filter-btn" data-filter=".retouching">Retouching</button>
+                <button class="filter-btn" data-filter=".photo">Photography</button>
+                <button class="filter-btn" data-filter=".vfx">VFX</button>
+                <button class="filter-btn" data-filter=".video">Videography</button>
+            </div>
+            <div id="portfolio-grid">
+                <div class="portfolio-item renders" data-aos="fade-up"><a href="projects/3D-Work/booth.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755285258/booth_lv5krl.webp" alt="3D render of a modern exhibition booth design." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Exhibition Booth</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item renders" data-aos="fade-up"><a href="projects/3D-Work/jewlery.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755741685/rrrv2_tby93s.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755654022/rrrv2_icdxfo.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>3D Jewelry</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item renders" data-aos="fade-up"><a href="projects/3D-Work/car.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755655617/car1_x6zta7.webp" alt="A photorealistic 3D render of a classic car." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>3D Car</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item renders" data-aos="fade-up"><a href="projects/3D-Work/ads-3d.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755655635/ads3_hjtyd7.webp" alt="A 3D advertisement concept." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>3D Ads</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item renders" data-aos="fade-up"><a href="projects/3D-Work/perfum.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755656760/perfum-after_hqjgfc.webp" alt="3D product visualization for a perfume bottle." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>3D Perfume Ad</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item ai" data-aos="fade-up"><a href="projects/AI Projects/sipes-ai.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755877940/video_el_gy_sipes_v3_2_sa3ljh.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755686814/thubnail_publki.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>SIPES AI Video</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item ai" data-aos="fade-up"><a href="projects/AI Projects/aubusson-design.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755737731/Aubusson_Furnitureh_utxkwa.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755686761/ai-v-1_glxrvf.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>Aubusson-Design AI Video</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item ai" data-aos="fade-up"><a href="projects/AI Projects/ads.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755738386/ai-v-3_pbha3k.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755686657/ai-v-3_j94vtv.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>AI Ads</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item ai" data-aos="fade-up"><a href="projects/AI Projects/photos.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755657557/ai-7_x7gnn3.webp" alt="Surreal and artistic photos generated by AI." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>AI Photos</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item retouching" data-aos="fade-up"><a href="projects/Retouching/masar-egbary.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687456/ahmed-dash_ddwtbe.webp" alt="Promotional poster for Masar Egbary TV series after retouching." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Masar Egbary Retouch</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item retouching" data-aos="fade-up"><a href="projects/Retouching/hussein-fahmy.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687453/h1_uwjga8.webp" alt="A retouched portrait of actor Hussein Fahmy." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Hussein Fahmy Retouch</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item retouching" data-aos="fade-up"><a href="projects/Retouching/fashion.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687438/fash6_zgmnjc.webp" alt="A high-fashion shot with professional retouching." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Fashion Retouching</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item retouching" data-aos="fade-up"><a href="projects/Retouching/ads.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687437/bent1_j61dbo.webp" alt="A retouched photo for a commercial advertisement." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Ad Retouch</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item retouching" data-aos="fade-up"><a href="projects/Retouching/girl-pink.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687453/girl-pink4_asg5re.webp" alt="A creative portrait with pink-themed retouching." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Portrait Retouch</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item retouching" data-aos="fade-up"><a href="projects/Retouching/product.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687476/product1_o2uf4o.webp" alt="A clean product shot with professional retouching." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Product Retouching</h3><span class="portfolio-item__view-btn">View Projects <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item retouching" data-aos="fade-up"><a href="projects/Retouching/outdoor.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687468/f4_z29w5g.webp" alt="An outdoor portrait with color grading and retouching." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Outdoor Retouch</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item retouching" data-aos="fade-up"><a href="projects/Retouching/neon.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755687458/neo1_chxi9w.webp" alt="A portrait with creative neon light effects and retouching." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Neon Retouch</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item photo" data-aos="fade-up"><a href="projects/Photography/food.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1763035827/gray-_2_bqyzn0.webp" alt="A sample from a photography session." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Food</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+				<div class="portfolio-item photo" data-aos="fade-up"><a href="projects/Photography/furniture.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755643640/photo19_dtidze.webp" alt="A sample from a photography session." class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>furniture</h3><span class="portfolio-item__view-btn">View Projects <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item vfx" data-aos="fade-up"><a href="projects/vfx/tower.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755739444/vfx3_bzkkb0.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755739125/thubnail_riqqqm.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>Cairo Tower VFX</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item vfx" data-aos="fade-up"><a href="projects/vfx/sipes.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755739546/vfx5_jqxynf.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755739097/thubnail_kynznm.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>SIPES VFX</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item vfx" data-aos="fade-up"><a href="projects/vfx/target-agency.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755739552/vfx6_lduvpq.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755739130/thubnail_td5hgr.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>Target Agency VFX</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item vfx" data-aos="fade-up"><a href="projects/vfx/ring.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755739536/1109_aiyzqh.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755739098/vfx1_ijtvqt.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>Ring VFX</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item vfx" data-aos="fade-up"><a href="projects/vfx/cours-ads.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755739186/vfx2_kjvxms.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755739127/thubnail_e6mmwy.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>Course Ad VFX</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item vfx" data-aos="fade-up"><a href="projects/vfx/ads-alex.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755739651/vfx4_efug2h.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755739098/thubnail_kel9qf.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>Alexandria Ad VFX</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item video" data-aos="fade-up"><a href="projects/Videos/restrant.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755741339/ved1_enqtfg.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755697289/thubnail_j8c7gj.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>Restaurant Video</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item video" data-aos="fade-up"><a href="projects/Videos/cafe.html"><video src="https://res.cloudinary.com/dg3jhh10o/video/upload/v1755740749/ved2_pgwacq.mp4" loop muted playsinline poster="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755697246/thubnail_hdem2j.webp" class="portfolio-item__media" loading="lazy"></video><div class="portfolio-item__overlay"><h3>Cafe Video</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+                <div class="portfolio-item video" data-aos="fade-up"><a href="projects/Videos/apartment.html"><img src="https://res.cloudinary.com/dg3jhh10o/image/upload/v1755715647/thubnail_pazanv.webp" alt="Apartment Tour Thumbnail" class="portfolio-item__media" loading="lazy"><div class="portfolio-item__overlay"><h3>Apartment Tour</h3><span class="portfolio-item__view-btn">View Project <i class="fas fa-arrow-right"></i></span></div></a></div>
+            </div>
+            <div id="show-more-container" class="hidden" data-aos="fade-up">
+                <button id="show-more-btn" class="cta-button">Show More</button>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer"><div class="container"><p>&copy; 2025 Mohamed Hassan. All Rights Reserved.</p></div></footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
