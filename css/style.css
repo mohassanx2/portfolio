@@ -498,7 +498,6 @@ body[data-theme="light"] .timeline-meta { color: #666; }
     font-family: var(--primary-font); 
     text-transform: uppercase;
     letter-spacing: 1px;
-    white-space: nowrap; /* 🎯 هذا السطر سيمنع انقسام العناوين 🎯 */
 }
 .skills-group h3 i {
     margin-right: 0.75rem;
@@ -725,3 +724,4 @@ body[data-theme="light"] .timeline-meta { color: #666; }
         text-overflow: ellipsis;
     }
 }
+
