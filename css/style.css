@@ -625,6 +625,16 @@ body[data-theme="light"] .timeline-meta { color: #666; }
     .skills-group h3 {
         white-space: normal; /* 4. (الأهم) السماح للعناوين بالانقسام على سطرين تاني */
     }
+    /* 🎯 إضافة: لإصلاح مشكلة خروج النص في قسم "Summary" 🎯 */
+    .resume-left-column,
+    .resume-section,
+    .resume-section p {
+        white-space: normal !important; /* 1. (الأهم) إجبار النص على الالتفاف */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        min-width: 0; /* 2. إلغاء أي عرض أدنى يسبب الخروج */
+        width: 100%; /* 3. التأكد أن العرض لا يتجاوز الحاوية */
+    }
     /* 🎯 نهاية إصلاحات صفحة About 🎯 */
     
     .about-preview__container { text-align: center; }
